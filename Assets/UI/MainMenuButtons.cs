@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-public class ExitGame : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class MainMenuButtons : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +13,15 @@ public class ExitGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
-
-    public void QuitGame()
+    public void PlayGame()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void ExitGame()
+    {
+        Debug.Log("QUIT!");
         Application.Quit();
-    }    
+    }
 }
