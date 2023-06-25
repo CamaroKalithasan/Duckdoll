@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C191B04F-9433-9D6E-884F-E5E3E04E0126}</ProjectGuid>
+    <ProjectGuid>{52AE9A46-1F85-D6B0-1D6A-5C5FE3070BC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.VisualScripting.Core</AssemblyName>
@@ -1063,7 +1063,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{C4B8035B-28A8-6037-3312-5E27CBBA2FC4}</Project>
+      <Project>{167C8DD8-DAE9-B4EB-5669-540766BC0884}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

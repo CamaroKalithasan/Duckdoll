@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 38
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 38
+  controlID: 39
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 39
+  controlID: 40
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UI
+    - Assets/Gameplay
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -329,16 +329,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UI
+  - Assets/Gameplay
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\themo\OneDrive\Documents\UNITY\Quackity Quackity Game
+  m_LastProjectPath: C:\Users\themo\OneDrive\Documents\UNITY\Duckdoll
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d45a0000
-    m_LastClickedID: 23252
-    m_ExpandedIDs: 000000004e59000000ca9a3b
+    m_SelectedIDs: e4590000
+    m_LastClickedID: 23012
+    m_ExpandedIDs: 00000000de59000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -366,7 +366,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e590000
+    m_ExpandedIDs: 00000000de590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 94160000
       m_LastClickedID: 0
-      m_ExpandedIDs: 4ad7ffff46dbffff90e2ffffeef4ffff4cf5ffff98f5ffff0cfaffff
+      m_ExpandedIDs: 16faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -862,9 +862,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0602804, y: 4.049172, z: -12.299148}
+    m_Target: {x: 0.5695394, y: 3.7001991, z: -6.773649}
     speed: 2
-    m_Value: {x: -1.0602804, y: 4.049172, z: -12.299148}
+    m_Value: {x: 0.5695394, y: 3.7001991, z: -6.773649}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -910,9 +910,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.14098263, y: 0.079209566, z: -0.01131224, w: -0.98678124}
+    m_Target: {x: -0.14578147, y: -0.03798125, z: 0.005605368, w: -0.9885793}
     speed: 2
-    m_Value: {x: -0.14099835, y: 0.0777287, z: -0.0111006675, w: -0.9868913}
+    m_Value: {x: -0.14578038, y: -0.037980963, z: 0.005605326, w: -0.9885718}
   m_Size:
     m_Target: 2.9779131
     speed: 2
