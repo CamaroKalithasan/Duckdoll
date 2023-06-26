@@ -10,12 +10,13 @@ public class PlayerCharacter : MonoBehaviour
     [SerializeField] float jumpForce = 5f;
     private bool isJumping;
     private Transform mainCameraTransform;
-
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCameraTransform = Camera.main.transform;
+        audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -33,6 +34,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
             isJumping = true;
+            audioSource.Play();
         }
     }
     private void OnCollisionEnter(UnityEngine.Collision collision)

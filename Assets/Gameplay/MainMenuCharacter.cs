@@ -6,11 +6,12 @@ public class MainMenuCharacter : MonoBehaviour
 {
     Rigidbody rb;
     private bool isJumping;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        audioSource = GetComponent<AudioSource>();
     }
     // Update is called once per frame
     void Update()
@@ -19,6 +20,7 @@ public class MainMenuCharacter : MonoBehaviour
         {
             rb.velocity = new Vector3(0, 5f, 0);
             isJumping = true;
+            audioSource.Play();
         }
     }
 
