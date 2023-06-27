@@ -376,6 +376,7 @@
 "Assets/Gameplay/PlayerCharacter.cs"
 "Assets/Gameplay/ThirdPersonCamera.cs"
 "Assets/Material/GrassTexture2D.cs"
+"Assets/Quirky Series Ultimate/_Scripts/Demo.cs"
 "Assets/UI/MainMenuButtons.cs"
 -langversion:9.0
 

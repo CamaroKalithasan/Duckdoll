@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Material\GrassTexture2D.cs" />
     <Compile Include="Assets\Gameplay\PlayerCharacter.cs" />
+    <Compile Include="Assets\Quirky Series Ultimate\_Scripts\Demo.cs" />
     <Compile Include="Assets\Gameplay\MainMenuCharacter.cs" />
     <Compile Include="Assets\UI\MainMenuButtons.cs" />
     <Compile Include="Assets\Gameplay\ThirdPersonCamera.cs" />
@@ -68,6 +69,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Quirky Series Ultimate\_Shader\SoftSurface.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -84,6 +86,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Quirky Series Ultimate\_Shader\ToonRamp.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
