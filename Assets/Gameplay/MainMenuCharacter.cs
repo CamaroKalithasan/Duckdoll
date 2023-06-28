@@ -5,21 +5,21 @@ using UnityEngine;
 public class MainMenuCharacter : MonoBehaviour
 {
     Rigidbody rb;
+    private int jumpNum = 0;
     private bool isJumping;
     public AudioSource audioSource;
     public Animator animator;
     public string idleAnimationName = "Idle_A";
     public string jumpAnimationName = "Fly";
+    public string spinAnimationName = "Spin";
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
-        
     }
-    // Update is called once per frame
+
     void Update()
     {
         if (!isJumping)
@@ -33,10 +33,17 @@ public class MainMenuCharacter : MonoBehaviour
             isJumping = true;
             animator.Play(jumpAnimationName);
             audioSource.Play();
+            jumpNum++;
+            if (jumpNum == 3)
+            {
+                animator.Play(spinAnimationName);
+                jumpNum = 0;
+            }
+
         }
     }
 
-    private void OnCollisionEnter(UnityEngine.Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
