@@ -86,7 +86,7 @@ public class PlayerCharacter : MonoBehaviour
         if (movement.magnitude == 0f && !isSitting)
         {
             noInputTimer += Time.deltaTime;
-            if (noInputTimer >= 3f) //in seconds
+            if (noInputTimer >= 60f) //in seconds
             {
                 animator.Play(sitAnimationName);
                 isSitting = true;
