@@ -1,26 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
     Rigidbody rb;
-    [SerializeField] float movementSpeed = 5f;
-    [SerializeField] float jumpForce = 5f;
-    Time time;
-    private bool isJumping;
-    private int jumpNum = 0;
     private Transform mainCameraTransform;
     public AudioSource audioSource;
     public Animator animator;
+
+    [SerializeField] float movementSpeed = 5f;
+    [SerializeField] float jumpForce = 5f;
+
+
     public string idleAnimationName = "Idle_A";
     public string jumpAnimationName = "Fly";
     public string walkAnimationName = "Walk";
     public string sitAnimationName = "Sit";
     public string spinAnimationName = "Spin";
+
     private float noInputTimer;
-    private bool isSitting;
+    private bool isSitting;    
+    private bool isJumping;
+    private int jumpNum = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +72,8 @@ public class PlayerCharacter : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
-        if ((Input.GetKey("space") || Input.GetKey("joystick button 0")) && !isJumping)
+
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0)) && !isJumping)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
             isJumping = true;

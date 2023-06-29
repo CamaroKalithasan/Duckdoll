@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4005792919205588408}
   - component: {fileID: 5239770078322571371}
   - component: {fileID: 2799740716385147855}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flowers_02_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3899520030807063256}
   m_RootOrder: 0
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -90,11 +92,19 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3474586469933685846}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.36221355, z: 0.2}
-  m_Center: {x: 0, y: 0.17206362, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.36, z: 0.2}
+  m_Center: {x: 0, y: 0.17, z: 0}
 --- !u!1 &3899520030806763256
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3899520030807063256}
   - component: {fileID: 4496930816834818447}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flowers_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,6 +132,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7546754162368725668}
   - {fileID: 2477855283117445636}
@@ -162,7 +173,7 @@ GameObject:
   - component: {fileID: 2477855283117445636}
   - component: {fileID: 8602329730404868096}
   - component: {fileID: 5102048460776030939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flowers_02_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,6 +190,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3899520030807063256}
   m_RootOrder: 1
@@ -202,6 +214,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

@@ -18,6 +18,7 @@ public class MainMenuCharacter : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     void Update()
@@ -27,7 +28,7 @@ public class MainMenuCharacter : MonoBehaviour
             animator.Play(idleAnimationName);
         }
 
-        if ((Input.GetKey("space") || Input.GetKey("joystick button 0")) && !isJumping)
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0)) && !isJumping)
         {
             rb.velocity = new Vector3(0, 5f, 0);
             isJumping = true;
