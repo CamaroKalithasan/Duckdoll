@@ -646,6 +646,8 @@ MonoBehaviour:
   walkAnimationName: Walk
   sitAnimationName: Sit
   spinAnimationName: Spin
+  attackAnimationName: Attack
+  hitAnimationName: Hit
 --- !u!82 &1125835574
 AudioSource:
   m_ObjectHideFlags: 0
@@ -782,7 +784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPoint: {fileID: 1075117822}
-  interactionRange: 3
+  interactionRadius: 2
 --- !u!1 &1225102687
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +893,7 @@ GameObject:
   - component: {fileID: 1494279388}
   - component: {fileID: 1494279392}
   m_Layer: 0
-  m_Name: Water
+  m_Name: TreeGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1003,5 +1005,6 @@ MonoBehaviour:
   - {fileID: 2807449429036958551, guid: f0c16f0ea935ea64297ca1d4d55d9746, type: 3}
   - {fileID: 9069115365609291303, guid: 60f79905accf3b24fa0114b941f1aac0, type: 3}
   numberOfTrees: 5000
+  treeMaxHealth: 100
   spawnAreaCenter: {x: 0, y: 0, z: 0}
   spawnAreaSize: {x: 1000, y: 0, z: 1000}

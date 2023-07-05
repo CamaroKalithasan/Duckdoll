@@ -61,6 +61,7 @@
     <Compile Include="Assets\Gameplay\TreeGenerator.cs" />
     <Compile Include="Assets\Material\GrassTexture2D.cs" />
     <Compile Include="Assets\Gameplay\PlayerCharacter.cs" />
+    <Compile Include="Assets\Gameplay\TreeHealth.cs" />
     <Compile Include="Assets\Quirky Series Ultimate\_Scripts\Demo.cs" />
     <Compile Include="Assets\Gameplay\MainMenuCharacter.cs" />
     <Compile Include="Assets\Gameplay\Interactor.cs" />

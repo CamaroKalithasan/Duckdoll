@@ -5,27 +5,38 @@ using UnityEngine;
 public class Interactor : MonoBehaviour
 {
     [SerializeField] private Transform interactionPoint;
-    [SerializeField] private float interactionRange = 3f;
+    [SerializeField] private float interactionRadius = 3f;
+
 
     // Update is called once per frame
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) // Check for F key press
         {
-            // Perform raycast
-            Ray ray = new Ray(interactionPoint.position, interactionPoint.forward);
-            RaycastHit hit;
+            Collider[] colliders = Physics.OverlapSphere(interactionPoint.position, interactionRadius);
 
-            if (Physics.Raycast(ray, out hit, interactionRange))
+            foreach (Collider collider in colliders)
             {
-                GameObject tree = hit.collider.gameObject;
+                GameObject tree = collider.gameObject;
+                TreeHealth treeHealth = tree.GetComponent<TreeHealth>();
+
                 if (tree.CompareTag("Tree"))
                 {
                     // Perform tree interaction
-                    Debug.Log("Interacting with tree: " + tree.name);
+                    if (treeHealth != null)
+                    {
+                        treeHealth.TakeDamage(20); // Damage amount can be adjusted as needed
+                    }
+
+                    Debug.Log("Interacting with tree: " + tree.name + " " + treeHealth);
                     // Add your interaction logic here
                 }
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(interactionPoint.position, interactionRadius);
     }
 }

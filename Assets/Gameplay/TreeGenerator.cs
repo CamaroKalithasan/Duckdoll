@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class TreeGenerator : MonoBehaviour
@@ -7,7 +8,7 @@ public class TreeGenerator : MonoBehaviour
     public GameObject[] treePrefabs; // Array of tree prefabs
     
     [SerializeField] private int numberOfTrees = 50;
-    
+    [SerializeField] private int treeMaxHealth = 100; // Set the maximum health value for all trees
     public Vector3 spawnAreaCenter;
     public Vector3 spawnAreaSize;
 
@@ -22,7 +23,12 @@ public class TreeGenerator : MonoBehaviour
         {
             GameObject randomTreePrefab = GetRandomTreePrefab();
             Vector3 randomPosition = GetRandomPositionWithinSpawnArea();
-            Instantiate(randomTreePrefab, randomPosition, Quaternion.identity);
+            GameObject tree = Instantiate(randomTreePrefab, randomPosition, Quaternion.identity);
+            TreeHealth treeHealth = tree.GetComponent<TreeHealth>();
+            if (treeHealth != null)
+            {
+                treeHealth.maxHealth = treeMaxHealth; // Set the maxHealth to a 100
+            }
         }
     }
 
@@ -34,11 +40,12 @@ public class TreeGenerator : MonoBehaviour
 
     private Vector3 GetRandomPositionWithinSpawnArea()
     {
-        Vector3 randomPosition = new Vector3(
+        Vector3 randomPosition = new Vector3
+            (
             Random.Range(spawnAreaCenter.x - spawnAreaSize.x / 2, spawnAreaCenter.x + spawnAreaSize.x / 2),
             spawnAreaCenter.y,
             Random.Range(spawnAreaCenter.z - spawnAreaSize.z / 2, spawnAreaCenter.z + spawnAreaSize.z / 2)
-        );
+            );
 
         return randomPosition;
     }

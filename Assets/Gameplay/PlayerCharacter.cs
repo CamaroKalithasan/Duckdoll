@@ -20,10 +20,13 @@ public class PlayerCharacter : MonoBehaviour
     public string walkAnimationName = "Walk";
     public string sitAnimationName = "Sit";
     public string spinAnimationName = "Spin";
+    public string attackAnimationName = "Attack";
+    //public string hitAnimationName = "Hit";
 
     private float noInputTimer;
     private bool isSitting;    
     private bool isJumping;
+    private bool isAttacking = false;
     private int jumpNum = 0;
 
     // Start is called before the first frame update
@@ -97,6 +100,10 @@ public class PlayerCharacter : MonoBehaviour
                 animator.Play(sitAnimationName);
                 isSitting = true;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.F) && !isAttacking && !isJumping && !isSitting)
+        {
+            animator.Play(attackAnimationName);
         }
     }
     private void OnCollisionEnter(UnityEngine.Collision collision)
