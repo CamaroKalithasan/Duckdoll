@@ -380,6 +380,8 @@
 "Assets/Gameplay/TreeHealth.cs"
 "Assets/Material/GrassTexture2D.cs"
 "Assets/Quirky Series Ultimate/_Scripts/Demo.cs"
+"Assets/UI/InventoryMenu.cs"
+"Assets/UI/InventorySystem.cs"
 "Assets/UI/MainMenuButtons.cs"
 -langversion:9.0
 
