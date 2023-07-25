@@ -60,12 +60,15 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainMenuButtons.cs" />
     <Compile Include="Assets\Material\GrassTexture2D.cs" />
+    <Compile Include="Assets\Scripts\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Scripts\TreeHealth.cs" />
     <Compile Include="Assets\Scripts\TreeGenerator.cs" />
-    <Compile Include="Assets\Scripts\InventorySystem.cs" />
+    <Compile Include="Assets\Scripts\InventoryItemController.cs" />
     <Compile Include="Assets\Quirky Series Ultimate\_Scripts\Demo.cs" />
     <Compile Include="Assets\Scripts\PlayerCharacter.cs" />
+    <Compile Include="Assets\Scripts\ItemPickup.cs" />
+    <Compile Include="Assets\Scripts\ItemController.cs" />
     <Compile Include="Assets\Scripts\MainMenuCharacter.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Interactor.cs" />
