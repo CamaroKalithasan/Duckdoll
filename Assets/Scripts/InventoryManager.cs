@@ -82,5 +82,10 @@ public class InventoryManager : MonoBehaviour
             Destroy(item.gameObject);
         }
     }
+
+    public void InventoryClosed()
+    {
+        EnableToggle.isOn = false;
+    }
 }
 

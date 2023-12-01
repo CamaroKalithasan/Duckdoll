@@ -101,9 +101,17 @@ public class PlayerCharacter : MonoBehaviour
                 isSitting = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.F) && !isAttacking && !isJumping && !isSitting)
+        if ((Input.GetKeyDown(KeyCode.F) || Input.GetKey(KeyCode.JoystickButton1)) && !isAttacking && !isJumping && !isSitting)
         {
             animator.Play(attackAnimationName);
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) && !isAttacking && !isJumping && !isSitting)
+        {
+            movementSpeed = 5f;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isAttacking && !isJumping && !isSitting)
+        {
+            movementSpeed = movementSpeed * 3;
         }
     }
     private void OnCollisionEnter(UnityEngine.Collision collision)
