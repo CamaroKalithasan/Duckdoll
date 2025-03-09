@@ -30,7 +30,7 @@ public class MainMenuCharacter : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0)) && !isJumping)
         {
-            rb.velocity = new Vector3(0, 5f, 0);
+            rb.linearVelocity = new Vector3(0, 5f, 0);
             isJumping = true;
             animator.Play(jumpAnimationName);
             audioSource.Play();

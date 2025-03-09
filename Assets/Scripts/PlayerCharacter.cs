@@ -54,7 +54,7 @@ public class PlayerCharacter : MonoBehaviour
             animator.Play(idleAnimationName);
             ResetNoInputTimer();
         }
-        rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
+        rb.linearVelocity = new Vector3(movement.x, rb.linearVelocity.y, movement.z);
         if (!isJumping && !isSitting)
         {
             if (movement.magnitude > 0f)
@@ -78,7 +78,7 @@ public class PlayerCharacter : MonoBehaviour
 
         if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton0)) && !isJumping)
         {
-            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
             isJumping = true;
             animator.Play(jumpAnimationName);
             audioSource.Play();
