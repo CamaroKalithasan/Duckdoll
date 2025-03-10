@@ -37,16 +37,32 @@ public class TreeGenerator : MonoBehaviour
         int randomIndex = Random.Range(0, treePrefabs.Length);
         return treePrefabs[randomIndex];
     }
-
     private Vector3 GetRandomPositionWithinSpawnArea()
     {
-        Vector3 randomPosition = new Vector3
-            (
-            Random.Range(spawnAreaCenter.x - spawnAreaSize.x / 2, spawnAreaCenter.x + spawnAreaSize.x / 2),
-            spawnAreaCenter.y,
-            Random.Range(spawnAreaCenter.z - spawnAreaSize.z / 2, spawnAreaCenter.z + spawnAreaSize.z / 2)
+        Vector3 randomPosition;
+        int maxAttempts = 10;
+        int attempts = 0;
+
+        do
+        {
+            randomPosition = new Vector3(
+                Random.Range(spawnAreaCenter.x - spawnAreaSize.x / 2, spawnAreaCenter.x + spawnAreaSize.x / 2),
+                spawnAreaCenter.y + 50f, // Start above to raycast downward
+                Random.Range(spawnAreaCenter.z - spawnAreaSize.z / 2, spawnAreaCenter.z + spawnAreaSize.z / 2)
             );
+
+            // Raycast downward to adjust Y position based on terrain
+            if (Physics.Raycast(randomPosition, Vector3.down, out RaycastHit hit, 100f))
+            {
+                randomPosition.y = hit.point.y; // Adjust to terrain height
+            }
+
+            attempts++;
+        }
+        while (Physics.CheckSphere(randomPosition, 1f) && attempts < maxAttempts); // Check for collisions
 
         return randomPosition;
     }
+
+
 }
