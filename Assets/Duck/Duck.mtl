@@ -1,0 +1,98 @@
+# Apple ModelI/O MTL File: Duck.mtl
+
+newmtl Mirror_1
+	map_Kd Mirror_1-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Mirror_1-metallic.png
+	specularTint 0
+	map_roughness Mirror_1-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl Cone
+	map_Kd Cone-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Cone-metallic.png
+	specularTint 0
+	map_roughness Cone-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl Cone_1
+	map_Kd Cone_1-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Cone_1-metallic.png
+	specularTint 0
+	map_roughness Cone_1-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl Mirror
+	map_Kd Mirror-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Mirror-metallic.png
+	specularTint 0
+	map_roughness Mirror-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl Mirror_4
+	map_Kd Mirror_4-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Mirror_4-metallic.png
+	specularTint 0
+	map_roughness Mirror_4-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl Mirror_2
+	map_Kd Mirror_2-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic Mirror_2-metallic.png
+	specularTint 0
+	map_roughness Mirror_2-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
