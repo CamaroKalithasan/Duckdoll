@@ -498,7 +498,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2113953595}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ListItems
         m_Mode: 1
@@ -1987,7 +1987,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113953595}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: CleanList
         m_Mode: 1
@@ -1999,7 +1999,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2113953595}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: InventoryClosed
         m_Mode: 1
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2113953595}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: EnableItemsRemove
         m_Mode: 1
@@ -2222,55 +2222,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
---- !u!1 &2113953593
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2113953594}
-  - component: {fileID: 2113953595}
-  m_Layer: 0
-  m_Name: InventoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2113953594
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113953593}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.99627686, y: 4.861084, z: 0.83203685}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2113953595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2113953593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7263c75a748245e44b50c6514db8fbba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  ItemContent: {fileID: 1710888801}
-  InventoryItem: {fileID: 5740060280820012864, guid: ddda13ad46350fe49b467aba1b97b158, type: 3}
-  EnableToggle: {fileID: 2105050004}
-  InventoryItems: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2281,5 +2232,4 @@ SceneRoots:
   - {fileID: 1494279391}
   - {fileID: 448179864}
   - {fileID: 400531878}
-  - {fileID: 2113953594}
   - {fileID: 470326899}

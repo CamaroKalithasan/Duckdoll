@@ -15,7 +15,7 @@ public class TreeGenerator : MonoBehaviour
     private void Start()
     {
         GenerateTrees();
-    }
+    } 
 
     private void GenerateTrees()
     {

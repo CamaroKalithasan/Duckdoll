@@ -41,7 +41,6 @@ public class PlayerCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 cameraForward = mainCameraTransform.forward;
         cameraForward.y = 0f;
@@ -55,6 +54,7 @@ public class PlayerCharacter : MonoBehaviour
             ResetNoInputTimer();
         }
         rb.linearVelocity = new Vector3(movement.x, rb.linearVelocity.y, movement.z);
+
         if (!isJumping && !isSitting)
         {
             if (movement.magnitude > 0f)
@@ -69,6 +69,7 @@ public class PlayerCharacter : MonoBehaviour
                 animator.Play(idleAnimationName);
             }
         }
+
         if (movement != Vector3.zero)
         {
             // Rotate the character to face the movement direction

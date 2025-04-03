@@ -12,24 +12,7 @@ public class Interactor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F)) // Check for F key press
         {
-            Collider[] colliders = Physics.OverlapSphere(interactionPoint.position, interactionRadius);
-
-            foreach (Collider collider in colliders)
-            {
-                GameObject tree = collider.gameObject;
-                TreeHealth treeHealth = tree.GetComponent<TreeHealth>();
-
-                if (tree.CompareTag("Tree"))
-                {
-                    // Perform tree interaction
-                    if (treeHealth != null)
-                    {
-                        treeHealth.TakeDamage(20); // Damage amount can be adjusted as needed
-                    }
-
-                    Debug.Log("Interacting with tree: " + tree.name + " " + treeHealth);
-                }
-            }
+            Debug.Log("Interacting with something that is around you... i guess");
         }
     }
     private void OnDrawGizmos()
