@@ -2,7 +2,7 @@
  Quack Out!
 
 # Specs
-Unity Version: 6000.0.41f1
+Unreal Version: 5.5.3
 
 Lowest GPUs:
 NVIDIA: GeForce GTX 1650 or higher. 
