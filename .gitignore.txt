@@ -1,0 +1,39 @@
+# Ignore user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build results
+[Bb]in/
+[Bb]uild/
+Build/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.log
+*.pdb
+*.obj
+*.exe
+*.dll
+
+# Ignore config that's user-specific
+Config/DefaultEditorPerProjectUserSettings.ini
+
+# Ignore crash reports
+CrashReportClient/
+
+# Ignore IDE folders
+.idea/
+.vscode/
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore Windows thumbnail cache
+Thumbs.db
