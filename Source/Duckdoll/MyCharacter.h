@@ -6,26 +6,53 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InputActionValue.h"
 #include "MyCharacter.generated.h"
 
+class UInputAction;
+
+/**
+ * Character Base.
+ */
 UCLASS()
 class DUCKDOLL_API AMyCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this character's properties
-	AMyCharacter();
+    AMyCharacter();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    virtual void BeginPlay() override;
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+protected:
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+    class USkeletalMeshComponent* CharacterMesh;
 
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+    class USpringArmComponent* CameraBoom;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+    class UCameraComponent* FollowCamera;
+
+    UPROPERTY(EditDefaultsOnly, Category = Input)
+    UInputAction* LookAction;
+
+
+private:
+    void Move(const FInputActionValue& Value);
+    void Look(const FInputActionValue& Value);
+    void JumpPressed();
+    void JumpReleased();
+
+    UPROPERTY(EditDefaultsOnly, Category = "Input")
+    class UInputMappingContext* InputMappingContext;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Input")
+    class UInputAction* MoveAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = "Input")
+    class UInputAction* JumpAction;
 };
