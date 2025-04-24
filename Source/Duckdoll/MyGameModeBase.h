@@ -9,11 +9,13 @@
 #include "MyGameModeBase.generated.h"
 
 /**
- * 
+ * Game Mode Base.
  */
 UCLASS()
 class DUCKDOLL_API AMyGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+	AMyGameModeBase();
 };
