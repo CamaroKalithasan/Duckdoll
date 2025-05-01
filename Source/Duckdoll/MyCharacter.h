@@ -10,6 +10,7 @@
 #include "MyCharacter.generated.h"
 
 class UInputAction;
+class UInputMappingContext;
 
 /**
  * Character Base.
@@ -26,6 +27,13 @@ protected:
     virtual void BeginPlay() override;
     virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+    // Input handlers
+    void LightAttack();
+    void HeavyAttack();
+
+    // Knockback function
+    void TakeDamageWithKnockback(float DamageAmount, FVector HitDirection);
+
 protected:
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
@@ -40,6 +48,11 @@ protected:
     UPROPERTY(EditDefaultsOnly, Category = Input)
     UInputAction* LookAction;
 
+    UPROPERTY(EditDefaultsOnly, Category = Input)
+    UInputAction* LightAttackAction;
+
+    UPROPERTY(EditDefaultsOnly, Category = Input)
+    UInputAction* HeavyAttackAction;
 
 private:
     void Move(const FInputActionValue& Value);
@@ -55,4 +68,13 @@ private:
 
     UPROPERTY(EditDefaultsOnly, Category = "Input")
     class UInputAction* JumpAction;
+
+    UPROPERTY(EditAnywhere, Category = "Combat")
+    float Durability = 0.0f;
+
+    UPROPERTY(EditAnywhere, Category = "Combat")
+    float MaxDurability = 999.0f;
+
+    UPROPERTY(EditAnywhere, Category = "Combat")
+    float BaseKnockback = 200.0f;
 };

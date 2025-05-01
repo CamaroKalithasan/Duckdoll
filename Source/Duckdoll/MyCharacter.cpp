@@ -95,6 +95,10 @@ void AMyCharacter::BeginPlay()
     }
 }
 
+// ----------------------------
+// INPUT BINDING
+// ----------------------------
+
 void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
     Super::SetupPlayerInputComponent(PlayerInputComponent);
@@ -116,6 +120,37 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
             EnhancedInput->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMyCharacter::Look);
         }
     }
+}
+
+void AMyCharacter::LightAttack()
+{
+    // Implement light attack logic here
+    Durability -= 10.0f;  // Light attack costs 10 durability
+    UE_LOG(LogTemp, Log, TEXT("Light Attack hits! Remaining Durability: %f"), Durability);
+}
+
+void AMyCharacter::HeavyAttack()
+{
+    // Implement heavy attack logic here
+    Durability -= 20.0f;  // Heavy attack costs 20 durability
+    UE_LOG(LogTemp, Log, TEXT("Heavy Attack hits! Remaining Durability: %f"), Durability);
+
+}
+
+void AMyCharacter::TakeDamageWithKnockback(float DamageAmount, FVector HitDirection)
+{
+    // Apply durability damage
+    Durability += DamageAmount;
+    Durability = FMath::Clamp(Durability, 0.f, MaxDurability);
+
+    UE_LOG(LogTemp, Log, TEXT("Damage is done! Current Durability: %f"), Durability);
+
+    // Apply knockback based on durability
+    float KnockbackStrength = BaseKnockback + (Durability * 5.0f); // Adjust multiplier for desired knockback scaling
+
+    LaunchCharacter(HitDirection * KnockbackStrength, true, true);
+
+    UE_LOG(LogTemp, Log, TEXT("Knockback applied: %f"), KnockbackStrength);
 }
 
 void AMyCharacter::Move(const FInputActionValue& Value)
